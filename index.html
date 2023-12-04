@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Моє портфоліо</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Портфоліо</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Головна <span class="sr-only">(Поточна)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#про-мене">Про мене</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#проекти">Проекти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#контакти">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 id="про-мене">Про мене</h1>
+      <p>Вітаю! Мене звуть Михайло. Я Front-End developer з Чернівців.</p>
+    </div>
+
+    <div class="container mt-5">
+      <h2 id="проекти">Мої проекти</h2>
+      <div class="row" id="projectContainer"></div>
+
+      <div class="text-center">
+        <button
+          class="btn btn-success"
+          data-toggle="modal"
+          data-target="#addProjectModal">
+          Додати проект
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="addProjectModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="addProjectModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProjectModalLabel">Додати проект</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="projectForm">
+              <div class="form-group">
+                <label for="projectName">Назва проекту:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="projectName"
+                  placeholder="Введіть назву проекту" />
+              </div>
+              <div class="form-group">
+                <label for="projectDescription">Опис проекту:</label>
+                <textarea
+                  class="form-control"
+                  id="projectDescription"
+                  rows="4"
+                  placeholder="Введіть опис проекту"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="projectLink">Посилання:</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="projectLink"
+                  placeholder="Введіть посилання на проект" />
+              </div>
+              <button type="button" class="btn btn-primary" id="addProjectBtn">
+                Додати
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light mt-5 fixed-bottom">
+      <div class="container py-3">
+        <h2>Контакти</h2>
+        <p>
+          Зв'яжіться зі мною за допомогою електронної пошти:
+          <a href="mailto:ваша@емейл.ком">mykhailoandrytskyi@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
